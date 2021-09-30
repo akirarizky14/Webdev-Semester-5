@@ -21,28 +21,29 @@ app.use((req, res, next) => {
 //   res.status(200).json({ message: 'KKKKKK'});
 // })
 
-let arr = []
-app.post('/addString',function(req,res){
-  arr.push(req.body.str)
-  console.log(arr)
-  res.json({
-    message: "added successfully"
-  })
-})
+// let arr = []
+// app.post('/addString',function(req,res){
+//   arr.push(req.body.str)
+//   console.log(arr)
+//   res.json({
+//     message: "added successfully"
+//   })
+// })
 
-app.get('/getString',function(req,res){
-  res.json({
-    arr
-  })
-})
+// app.get('/getString',function(req,res){
+//   res.json({
+//     arr
+//   })
+// })
 
-app.delete('/delString',function(req,res){
-  arr.pop(req.params.id);
-  console.log(arr)
-  res.json({
-    message: "deleted successfully"
-  })
-})
+// app.delete('/delString',function(req,res){
+//   arr.pop(req.params.id);
+//   console.log(arr)
+//   res.json({
+//     message: "deleted successfully"
+//   })
+// })
+
 // Homework
 // 1
 app.post('/sum', (req, res) => {
@@ -61,7 +62,7 @@ app.post('/reverseCase', (req, res) =>{
           reverseCase.push(element.toLowerCase());
       }
   });
-  res.status(200).json({reverseCase: reverseCase.join("")})
+  res.status(200).json({reverseCase: reverseCase.join('')})
 })
 // 3
 app.post('/reverseArray', (req, res) =>{
@@ -70,27 +71,27 @@ app.post('/reverseArray', (req, res) =>{
   for(let i = str.length - 1; i>=0; i--){
       reverseArray.push(str[i]);
   }
-  res.status(200).json({reverseArray: reverseArray.join("")})
+  res.status(200).json({reverseArray: reverseArray.join('')})
 })
 // 4
 
-app.get('/test',(req,res) => {
+app.get('/try',(req,res) => {
   res.status(200).json({message:'Get'});
 })
 
-app.post('/test',(req,res) => {
+app.post('/try',(req,res) => {
   res.status(200).json({message:'Post'});
 })
 
-app.put('/test',(req,res) => {
+app.put('/try',(req,res) => {
   res.status(200).json({message:'Put'});
 })
 
-app.patch('/test',(req,res) => {
+app.patch('/try',(req,res) => {
   res.status(200).json({message:'Patch'});
 })
 
-app.delete('/test',(req,res) => {
+app.delete('/try',(req,res) => {
   res.status(200).json({message:'Delete'});
 })
 
